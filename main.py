@@ -1,90 +1,110 @@
 import tkinter as tk
-from tkinter import ttk, scrolledtext
-from scapy.all import sniff, IP, TCP, UDP, ICMP
+from tkinter import scrolledtext
+from scapy.all import sniff
+import random
+import os
 import threading
+from PIL import Image, ImageTk
 
-# Default settings
-PACKET_LIMIT = 20  # Number of packets to capture
-TIMEOUT = 30  # Stop sniffing after 30 seconds
-stop_sniffing = False
+# Load memes
+meme_folder = "./memes/"
+meme_files = {
+    "welcome": os.path.join(meme_folder, "meme1.jpeg"),
+    "sniffing": [os.path.join(meme_folder, "meme2.jpeg"), os.path.join(meme_folder, "meme3.jpeg")],
+    "stop": os.path.join(meme_folder, "meme4.jpeg")
+}
 
-# Function to process packets
-def packet_callback(packet):
-    if packet.haslayer(IP):
-        protocol = "Other"
-        if packet.haslayer(TCP):
-            protocol = "TCP"
-        elif packet.haslayer(UDP):
-            protocol = "UDP"
-        elif packet.haslayer(ICMP):
-            protocol = "ICMP"
+capturing = False
 
-        result = f"Source: {packet[IP].src} → Dest: {packet[IP].dst} | Protocol: {protocol}\n"
-        text_output.insert(tk.END, result)
-        text_output.yview(tk.END)
+# Function to switch UI from Welcome to Sniffer
+def start_sniffing_ui():
+    welcome_frame.pack_forget()
+    sniffer_frame.pack()
+    start_sniffing()
 
-# Function to start sniffing
-def start_sniffing():
-    global stop_sniffing
-    stop_sniffing = False
-    status_label.config(text="Status: Sniffing...", fg="green")
-
-    # Get selected protocol
-    selected_protocol = protocol_var.get()
+# Function to show a welcome screen
+def show_welcome():
+    img = Image.open(meme_files["welcome"])
+    img = img.resize((250, 250))
+    img = ImageTk.PhotoImage(img)
     
-    def sniff_packets():
-        sniff(
-            prn=packet_callback,
-            store=False,
-            count=PACKET_LIMIT,
-            timeout=TIMEOUT,
-            filter=selected_protocol.lower() if selected_protocol != "All" else None
-        )
-        status_label.config(text="Status: Stopped", fg="red")
+    meme_label = tk.Label(welcome_frame, image=img, bg="black")
+    meme_label.image = img
+    meme_label.pack()
+    
+    start_button = tk.Button(welcome_frame, text="Start Sniffing", command=start_sniffing_ui, bg="green", fg="white")
+    start_button.pack(pady=10)
 
-    # Run in a separate thread
-    sniff_thread = threading.Thread(target=sniff_packets)
+# Function to update the meme while sniffing
+def update_meme():
+    if meme_files["sniffing"]:
+        random_meme = random.choice(meme_files["sniffing"])
+        img = Image.open(random_meme)
+        img = img.resize((150, 150))
+        img = ImageTk.PhotoImage(img)
+        meme_label.configure(image=img)
+        meme_label.image = img
+
+# Function to process captured packets
+def packet_callback(packet):
+    if not capturing:
+        return
+    
+    info = f"[+] Packet: {packet.summary()}\n"
+    packet_text.insert(tk.END, info)
+    packet_text.see(tk.END)
+    update_meme()
+
+# Function to start packet sniffing in a separate thread
+def start_sniffing():
+    global capturing
+    capturing = True
+    packet_text.insert(tk.END, "\n[+] Sniffing Started...\n")
+    
+    sniff_thread = threading.Thread(target=lambda: sniff(prn=packet_callback, store=False, stop_filter=lambda x: not capturing))
+    sniff_thread.daemon = True
     sniff_thread.start()
 
-# Function to stop sniffing manually
+# Function to stop packet sniffing
 def stop_sniffing():
-    global stop_sniffing
-    stop_sniffing = True
-    status_label.config(text="Status: Stopped", fg="red")
+    global capturing
+    capturing = False
+    packet_text.insert(tk.END, "\n[-] Sniffing Stopped.\n")
 
 # GUI Setup
 root = tk.Tk()
-root.title("Network Packet Sniffer")
-root.geometry("500x400")
+root.title("Interactive Packet Sniffer")
+root.geometry("600x400")
+root.configure(bg="black")
 
-# Title
-title_label = tk.Label(root, text="Network Packet Sniffer", font=("Arial", 14, "bold"))
-title_label.pack(pady=5)
+# Welcome Frame
+welcome_frame = tk.Frame(root, bg="black")
+welcome_frame.pack()
+show_welcome()
 
-# Status Label
-status_label = tk.Label(root, text="Status: Idle", fg="black", font=("Arial", 10))
-status_label.pack()
+# Sniffer Frame (Hidden initially)
+sniffer_frame = tk.Frame(root, bg="black")
 
-# Protocol Selection
-protocol_var = tk.StringVar(value="All")
-protocol_label = tk.Label(root, text="Select Protocol:")
-protocol_label.pack()
-protocol_dropdown = ttk.Combobox(root, textvariable=protocol_var, values=["All", "TCP", "UDP", "ICMP"])
-protocol_dropdown.pack()
+# Packet Display Area
+packet_text = scrolledtext.ScrolledText(sniffer_frame, width=70, height=15, bg="black", fg="white")
+packet_text.pack()
 
 # Start/Stop Buttons
-btn_frame = tk.Frame(root)
-btn_frame.pack(pady=5)
+button_frame = tk.Frame(sniffer_frame, bg="black")
+button_frame.pack()
 
-start_btn = tk.Button(btn_frame, text="Start Sniffing", command=start_sniffing, bg="green", fg="white", width=15)
-start_btn.grid(row=0, column=0, padx=5)
+stop_img = Image.open(meme_files["stop"])
+stop_img = stop_img.resize((50, 50))
+stop_img = ImageTk.PhotoImage(stop_img)
 
-stop_btn = tk.Button(btn_frame, text="Stop Sniffing", command=stop_sniffing, bg="red", fg="white", width=15)
-stop_btn.grid(row=0, column=1, padx=5)
+start_button = tk.Button(button_frame, text="Start Sniffing", command=start_sniffing, bg="green", fg="white")
+start_button.pack(side=tk.LEFT, padx=10, pady=5)
+stop_button = tk.Button(button_frame, image=stop_img, command=stop_sniffing, bg="red")
+stop_button.image = stop_img
+stop_button.pack(side=tk.RIGHT, padx=10, pady=5)
 
-# Output Display
-text_output = scrolledtext.ScrolledText(root, height=15, width=60)
-text_output.pack(pady=5)
+# Meme Display
+meme_label = tk.Label(sniffer_frame, bg="black")
+meme_label.pack()
 
-# Run the GUI
 root.mainloop()
