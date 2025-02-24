@@ -1,0 +1,186 @@
+[+] Packet 1: Ether / IP / TCP 51.105.71.136:https > 192.168.127.25:51550 FPA / Raw
+
+[+] Packet 2: Ether / IPv6 / TCP 2606:4700:90c2:7cbc:c264:4e2:5ff2:75c4:https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:50439 PA / Raw
+
+[+] Packet 3: Ether / IPv6 / TCP 2606:4700:90c2:7cbc:c264:4e2:5ff2:75c4:https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:50439 PA / Raw
+
+[+] Packet 4: Ether / IPv6 / TCP 2606:4700:90c2:7cbc:c264:4e2:5ff2:75c4:https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:50439 PA / Raw
+
+[+] Packet 5: Ether / IP / TCP 3.233.158.25:https > 192.168.127.25:51553 SA
+
+[+] Packet 6: Ether / IP / TCP 192.168.127.25:51550 > 51.105.71.136:https A
+
+[+] Packet 7: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:50439 > 2606:4700:90c2:7cbc:c264:4e2:5ff2:75c4:https A
+
+[+] Packet 8: Ether / IP / TCP 192.168.127.25:51550 > 51.105.71.136:https PA / Raw
+
+[+] Packet 9: Ether / IP / TCP 192.168.127.25:51550 > 51.105.71.136:https FA
+
+[+] Packet 10: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:50439 > 2606:4700:90c2:7cbc:c264:4e2:5ff2:75c4:https PA / Raw
+
+[+] Packet 11: Ether / IP / TCP 3.233.158.25:https > 192.168.127.25:51554 SA
+
+[+] Packet 12: Ether / IPv6 / TCP 2606:4700:90c2:7cbc:c264:4e2:5ff2:75c4:https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:50439 A
+
+[+] Packet 13: Ether / IP / TCP 51.105.71.136:https > 192.168.127.25:51550 A
+
+[+] Packet 14: Ether / IP / TCP 51.105.71.136:https > 192.168.127.25:51550 A
+
+[+] Packet 15: Ether / IP / TCP 3.233.158.25:https > 192.168.127.25:51553 SA
+
+[+] Packet 16: Ether / IP / TCP 3.233.158.25:https > 192.168.127.25:51554 SA
+
+[+] Packet 17: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51522 > 2600:1901:1:388:::https A / Raw
+
+[+] Packet 18: Ether / IPv6 / TCP 2600:1901:1:388:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51522 A
+
+[+] Packet 19: Ether / IP / TCP 192.168.127.25:49791 > 208.115.231.58:https A / Raw
+
+[+] Packet 20: Ether / IP / TCP 208.115.231.58:https > 192.168.127.25:49791 A
+
+[+] Packet 21: Ether / IP / TCP 192.168.127.25:49791 > 208.115.231.58:https A
+
+[+] Packet 22: Ether / IP / TCP 208.115.231.58:https > 192.168.127.25:49791 A
+
+[+] Packet 23: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:49733 > 2600:1901:1:304:::https PA / Raw
+
+[+] Packet 24: Ether / IPv6 / TCP 2600:1901:1:304:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:49733 A
+
+[+] Packet 25: Ether / IPv6 / TCP 2600:1901:1:304:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:49733 PA / Raw
+
+[+] Packet 26: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:49733 > 2600:1901:1:304:::https A
+
+[+] Packet 1: Ether / IP / TCP 104.208.16.95:https > 192.168.127.25:51560 A / Raw
+
+[+] Packet 2: Ether / IP / TCP 104.208.16.95:https > 192.168.127.25:51560 A / Raw
+
+[+] Packet 3: Ether / IP / TCP 192.168.127.25:51560 > 104.208.16.95:https A
+
+[+] Packet 4: Ether / IP / TCP 104.208.16.95:https > 192.168.127.25:51560 A / Raw
+
+[+] Packet 5: Ether / IP / TCP 104.208.16.95:https > 192.168.127.25:51560 PA / Raw
+
+[+] Packet 6: Ether / IP / TCP 192.168.127.25:51560 > 104.208.16.95:https A
+
+[+] Packet 7: Ether / IP / TCP 192.168.127.25:51560 > 104.208.16.95:https A / Raw
+
+[+] Packet 8: Ether / IP / TCP 192.168.127.25:51560 > 104.208.16.95:https PA / Raw
+
+[+] Packet 9: Ether / IP / TCP 104.208.16.95:https > 192.168.127.25:51560 A
+
+[+] Packet 10: Ether / IP / TCP 104.208.16.95:https > 192.168.127.25:51560 PA / Raw
+
+[+] Packet 11: Ether / IP / TCP 104.208.16.95:https > 192.168.127.25:51560 FPA / Raw
+
+[+] Packet 12: Ether / IP / TCP 192.168.127.25:51560 > 104.208.16.95:https A
+
+[+] Packet 13: Ether / IP / TCP 192.168.127.25:51560 > 104.208.16.95:https PA / Raw
+
+[+] Packet 14: Ether / IP / TCP 192.168.127.25:51560 > 104.208.16.95:https FA
+
+[+] Packet 15: Ether / IP / TCP 104.208.16.95:https > 192.168.127.25:51560 A
+
+[+] Packet 16: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51521 > 2600:1901:1:388:::https A / Raw
+
+[+] Packet 17: Ether / IPv6 / TCP 2600:1901:1:388:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51521 A
+
+[+] Packet 18: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51523 > 2a04:4e42:42::762:https A / Raw
+
+[+] Packet 19: Ether / IPv6 / TCP 2a04:4e42:42::762:https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51523 A
+
+[+] Packet 20: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51467 > 2600:1901:1:7c5:::https A / Raw
+
+[+] Packet 21: Ether / IPv6 / TCP 2600:1901:1:7c5:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51467 A
+
+[+] Packet 22: Ether / IPv6 / ICMPv6ND_NS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address fe:cc:ef:1c:34:bc
+
+[+] Packet 23: Ether / IPv6 / ICMPv6ND_NA / ICMPv6 Neighbor Discovery Option - Destination Link-Layer Address 90:e8:68:26:58:bb
+
+[+] Packet 24: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51163 > 2405:200:1611:1731::312c:7909:https A / Raw
+
+[+] Packet 25: Ether / IPv6 / TCP 2405:200:1611:1731::312c:7909:https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51163 A
+
+[+] Packet 26: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51468 > 2600:1901:1:388:::https A / Raw
+
+[+] Packet 27: Ether / IPv6 / TCP 2600:1901:1:388:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51468 A
+
+[+] Packet 28: Ether / IPv6 / ICMPv6ND_NS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 90:e8:68:26:58:bb
+
+[+] Packet 29: Ether / IPv6 / ICMPv6 Neighbor Discovery - Neighbor Advertisement (tgt: 2409:40d2:12ab:62b9::3d)
+
+[+] Packet 30: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51536 > 2405:200:1611:1731::312c:7909:https A / Raw
+
+[+] Packet 31: Ether / IPv6 / TCP 2405:200:1611:1731::312c:7909:https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51536 A
+
+[+] Packet 32: Ether / IP / TCP 192.168.127.25:51227 > 140.82.114.25:https A / Raw
+
+[+] Packet 33: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51159 > 2600:1901:1:7c5:::https A / Raw
+
+[+] Packet 34: Ether / IPv6 / TCP 2600:1901:1:7c5:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51159 A
+
+[+] Packet 35: Ether / IP / TCP 140.82.114.25:https > 192.168.127.25:51227 A
+
+[+] Packet 36: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 > 2600:1901:1:7c5:::https PA / Raw
+
+[+] Packet 37: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 > 2600:1901:1:7c5:::https PA / Raw
+
+[+] Packet 38: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 > 2600:1901:1:7c5:::https PA / Raw
+
+[+] Packet 39: Ether / IPv6 / TCP 2600:1901:1:7c5:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 A
+
+[+] Packet 40: Ether / IPv6 / TCP 2600:1901:1:7c5:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 A
+
+[+] Packet 41: Ether / IPv6 / TCP 2600:1901:1:7c5:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 A
+
+[+] Packet 42: Ether / IPv6 / TCP 2600:1901:1:7c5:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 PA / Raw
+
+[+] Packet 43: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 > 2600:1901:1:7c5:::https A
+
+[+] Packet 44: Ether / IPv6 / TCP 2600:1901:1:7c5:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 PA / Raw
+
+[+] Packet 45: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 > 2600:1901:1:7c5:::https PA / Raw
+
+[+] Packet 46: Ether / IPv6 / TCP 2600:1901:1:7c5:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:51463 A
+
+[+] Packet 47: Ether / IP / TCP 192.168.127.25:49791 > 208.115.231.58:https A / Raw
+
+[+] Packet 48: Ether / IP / TCP 208.115.231.58:https > 192.168.127.25:49791 A
+
+[+] Packet 49: Ether / IP / TCP 192.168.127.25:49791 > 208.115.231.58:https A
+
+[+] Packet 50: Ether / IP / TCP 208.115.231.58:https > 192.168.127.25:49791 A
+
+[+] Packet 51: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:49720 > 2600:1901:1:304:::https PA / Raw
+
+[+] Packet 52: Ether / IPv6 / TCP 2600:1901:1:304:::https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:49720 A
+
+[+] Packet 53: Ether / ARP who has 192.168.127.25 says 192.168.127.5
+
+[+] Packet 54: Ether / ARP is at 90:e8:68:26:58:bb says 192.168.127.25
+
+[+] Packet 55: Ether / IP / UDP / DNS Qry b'dc.services.visualstudio.com.'
+
+[+] Packet 56: Ether / IP / UDP / DNS Qry b'dc.services.visualstudio.com.'
+
+[+] Packet 57: Ether / IPv6 / UDP / DNS Qry b'dc.services.visualstudio.com.'
+
+[+] Packet 58: Ether / IPv6 / UDP / DNS Qry b'dc.services.visualstudio.com.'
+
+[+] Packet 59: Ether / IP / UDP / DNS Ans b'dc.applicationinsights.microsoft.com.'
+
+[+] Packet 60: Ether / IP / UDP / DNS Ans b'dc.applicationinsights.microsoft.com.'
+
+[+] Packet 61: Ether / IP / TCP 192.168.127.25:51561 > 20.37.198.118:https S
+
+[+] Packet 62: Ether / IPv6 / UDP / DNS Ans b'dc.applicationinsights.microsoft.com.'
+
+[+] Packet 63: Ether / IPv6 / UDP / DNS Ans b'dc.applicationinsights.microsoft.com.'
+
+[+] Packet 64: Ether / IP / UDP 192.168.127.25:57621 > 192.168.127.255:57621 / Raw
+
+[+] Packet 65: Ether / IPv6 / TCP 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:50439 > 2606:4700:90c2:7cbc:c264:4e2:5ff2:75c4:https A / Raw
+
+[+] Packet 66: Ether / IPv6 / TCP 2606:4700:90c2:7cbc:c264:4e2:5ff2:75c4:https > 2409:40d2:12ab:62b9:1123:35d4:fbf9:6dfe:50439 A
+
+[+] Packet 67: Ether / IP / TCP 192.168.127.25:51561 > 20.37.198.118:https S
+
